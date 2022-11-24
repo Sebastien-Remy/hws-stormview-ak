@@ -38,7 +38,7 @@ class SourceViewController: NSViewController, NSTableViewDataSource, NSTableView
                    row: Int) -> NSView? {
 
         guard let cellView = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as? NSTableCellView else { return nil }
-
+        cellView.imageView?.image = NSImage(named: pictures[row])
         cellView.textField?.stringValue = pictures[row]
         
         return cellView

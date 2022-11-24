@@ -194,26 +194,41 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="6JU-Mc-Unz">
-                                                            <rect key="frame" x="18" y="0.0" width="161" height="24"/>
+                                                        <tableCellView id="Adc-dC-Mw1">
+                                                            <rect key="frame" x="18" y="0.0" width="150" height="26"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="W7h-hH-e7V">
-                                                                    <rect key="frame" x="0.0" y="-2" width="161" height="28"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="eu5-ni-2B8">
-                                                                        <font key="font" metaFont="system" size="24"/>
+                                                                <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rph-Zm-3ZK">
+                                                                    <rect key="frame" x="6" y="-2" width="15" height="26"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="15" id="bMh-a5-RCh"/>
+                                                                        <constraint firstAttribute="width" constant="15" id="oiZ-f4-LFi"/>
+                                                                    </constraints>
+                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" catalog="system" id="fpZ-h5-qU6"/>
+                                                                </imageView>
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jfD-jT-7Lo">
+                                                                    <rect key="frame" x="25" y="3" width="124" height="16"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="G5l-xa-Q0B">
+                                                                        <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="W7h-hH-e7V" firstAttribute="centerX" secondItem="6JU-Mc-Unz" secondAttribute="centerX" id="Ov4-lx-7HA"/>
-                                                                <constraint firstItem="W7h-hH-e7V" firstAttribute="centerY" secondItem="6JU-Mc-Unz" secondAttribute="centerY" id="TuX-ye-Pti"/>
-                                                                <constraint firstItem="W7h-hH-e7V" firstAttribute="leading" secondItem="6JU-Mc-Unz" secondAttribute="leading" constant="2" id="hTB-Lz-x9F"/>
+                                                                <constraint firstItem="rph-Zm-3ZK" firstAttribute="leading" secondItem="Adc-dC-Mw1" secondAttribute="leading" constant="6" id="CaG-2h-MK0"/>
+                                                                <constraint firstItem="jfD-jT-7Lo" firstAttribute="leading" secondItem="rph-Zm-3ZK" secondAttribute="trailing" constant="6" id="H4y-zY-wcN"/>
+                                                                <constraint firstAttribute="trailing" secondItem="jfD-jT-7Lo" secondAttribute="trailing" constant="3" id="HPX-qq-Z8U"/>
+                                                                <constraint firstItem="jfD-jT-7Lo" firstAttribute="centerY" secondItem="rph-Zm-3ZK" secondAttribute="centerY" id="UcY-Zm-GLU"/>
+                                                                <constraint firstItem="rph-Zm-3ZK" firstAttribute="top" secondItem="Adc-dC-Mw1" secondAttribute="top" constant="8" id="Wv9-vV-erW"/>
+                                                                <constraint firstAttribute="bottom" secondItem="rph-Zm-3ZK" secondAttribute="bottom" constant="3" id="fcR-yc-6hk"/>
+                                                                <constraint firstItem="rph-Zm-3ZK" firstAttribute="top" secondItem="Adc-dC-Mw1" secondAttribute="top" constant="8" id="vbx-Ad-fBB"/>
+                                                                <constraint firstAttribute="bottom" secondItem="rph-Zm-3ZK" secondAttribute="bottom" constant="3" id="yH1-pE-Fkx"/>
+                                                                <constraint firstItem="rph-Zm-3ZK" firstAttribute="leading" secondItem="Adc-dC-Mw1" secondAttribute="leading" constant="6" id="yL9-xV-QcF"/>
                                                             </constraints>
                                                             <connections>
-                                                                <outlet property="textField" destination="W7h-hH-e7V" id="Mm7-bt-e6Z"/>
+                                                                <outlet property="imageView" destination="rph-Zm-3ZK" id="Jdo-O6-hTm"/>
+                                                                <outlet property="textField" destination="jfD-jT-7Lo" id="VKf-rS-SEu"/>
                                                             </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
@@ -281,4 +296,7 @@
             <point key="canvasLocation" x="801" y="872"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSActionTemplate" catalog="system" width="20" height="20"/>
+    </resources>
 </document>
