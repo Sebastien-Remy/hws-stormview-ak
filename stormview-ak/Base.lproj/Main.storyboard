@@ -124,6 +124,31 @@
                         <rect key="contentRect" x="196" y="240" width="600" height="100"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2240" height="1235"/>
                         <value key="minSize" type="size" width="600" height="100"/>
+                        <toolbar key="toolbar" implicitIdentifier="CC9F86A9-0E42-4C61-9022-D5DBB7E06DA2" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="3gj-Mz-CGm">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="Z4V-NS-1Gd"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="DnE-4e-hJR"/>
+                                <toolbarItem implicitItemIdentifier="F280BF9A-19B1-4958-987A-033B1BAE0755" label="Share" paletteLabel="Share" image="NSShareTemplate" id="Aem-Vf-iXa">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="47" height="25"/>
+                                    <size key="maxSize" width="47" height="47"/>
+                                    <button key="view" verticalHuggingPriority="750" id="Zd2-Y4-xMX">
+                                        <rect key="frame" x="0.0" y="14" width="47" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSShareTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pxb-Tj-Heb">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="shareClicked:" target="Oky-zY-oP4" id="KQL-Oc-tsh"/>
+                                        </connections>
+                                    </button>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="Aem-Vf-iXa"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -136,10 +161,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--Split View Controller-->
+        <!--View Controller-->
         <scene sceneID="k1r-fT-VEm">
             <objects>
-                <splitViewController id="7L3-Fz-Udj" sceneMemberID="viewController">
+                <splitViewController id="7L3-Fz-Udj" customClass="ViewController" customModule="stormview_ak" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem holdingPriority="260" id="jdW-cK-pKf"/>
                         <splitViewItem id="78F-n8-I1m"/>
@@ -166,23 +191,23 @@
             <objects>
                 <viewController id="T2y-Dc-0RK" customClass="SourceViewController" customModule="stormview_ak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="jdx-6T-Xh3">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="189" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="80" horizontalPageScroll="10" verticalLineScroll="80" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFQ-B6-ZLf">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="189" height="300"/>
                                 <clipView key="contentView" drawsBackground="NO" id="b22-QF-z3Z">
-                                    <rect key="frame" x="1" y="1" width="198" height="298"/>
+                                    <rect key="frame" x="1" y="1" width="187" height="298"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="80" viewBased="YES" id="3Ar-eN-zDs">
-                                            <rect key="frame" x="0.0" y="0.0" width="198" height="298"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="187" height="298"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                             <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn identifier="AutomaticTableColumnIdentifier.0" width="166" minWidth="40" maxWidth="1000" id="BnR-3D-nEa">
+                                                <tableColumn identifier="AutomaticTableColumnIdentifier.0" width="155" minWidth="40" maxWidth="1000" id="BnR-3D-nEa">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -203,7 +228,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="rph-Zm-3ZK" secondAttribute="height" multiplier="20:17" constant="9.4117647058823533" id="8do-Yu-OJI"/>
                                                                     </constraints>
-                                                                    <imageCell key="cell" controlSize="small" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" catalog="system" id="fpZ-h5-qU6"/>
+                                                                    <imageCell key="cell" controlSize="small" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="fpZ-h5-qU6"/>
                                                                 </imageView>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jfD-jT-7Lo">
                                                                     <rect key="frame" x="30" y="3" width="119" height="16"/>
@@ -240,7 +265,7 @@
                                     <nil key="backgroundColor"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="XbC-kI-FBk">
-                                    <rect key="frame" x="1" y="263" width="198" height="16"/>
+                                    <rect key="frame" x="1" y="283" width="187" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="irF-7Z-vRB">
@@ -294,6 +319,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NSActionTemplate" catalog="system" width="20" height="20"/>
+        <image name="NSActionTemplate" width="20" height="20"/>
+        <image name="NSShareTemplate" width="19" height="22"/>
     </resources>
 </document>
